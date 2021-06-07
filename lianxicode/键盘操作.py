@@ -1,6 +1,8 @@
 """键盘操作"""
 
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
 driver = webdriver.Chrome()
 driver.implicitly_wait(10)
 
@@ -12,3 +14,6 @@ elem.send_keys('goayang')
 # 方式一：元素定位
 # 方式二：
 elem.submit()
+# 方式三（键盘enter）
+elem.send_keys(Keys.ENTER)
+elem.send_keys(Keys.CONTROL, Keys.SPACE)
